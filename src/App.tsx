@@ -43,12 +43,12 @@ export default function App() {
           value={input}
           onChange={e => setInput(e.target.value)}
           placeholder="What needs to be done?"
-          style={{ flex: 1, padding: '10px 14px', fontSize: 15, borderRadius: 8, border: '1px solid #ddd' }}
+          style={{ flex: 1, padding: '10px 14px', fontSize: 15, borderRadius: 8, border: '1px solid #ffffff' }}
         />
-        <button type="submit" style={{ padding: '10px 18px', borderRadius: 8, background: '#1D9E75', color: '#fff', border: 'none', cursor: 'pointer' }}>
+        <button type="submit" style={{ padding: '10px 18px', borderRadius: 8, background: '#1D9E75', color: '#ffffff', border: 'none', cursor: 'pointer' }}>
           Add
         </button>
-      </form>
+      </form>``
 
       {/* filter tabs */}
       <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
@@ -60,7 +60,7 @@ export default function App() {
               padding: '5px 14px', borderRadius: 8, fontSize: 13, cursor: 'pointer',
               border: '1px solid #ddd',
               background: filter === f ? '#1D9E75' : 'transparent',
-              color: filter === f ? '#fff' : '#ffffff',
+              color: filter === f ? '#000000' : '#000000',
             }}
           >
             {f[0].toUpperCase() + f.slice(1)}
@@ -70,7 +70,7 @@ export default function App() {
 
       <ul style={{ listStyle: 'none', padding: 0 }}>
         {visible.map(todo => (
-          <li key={todo.id} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '12px 0', borderBottom: '1px solid #f0f0f0' }}>
+          <li key={todo.id} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '12px 0', borderBottom: '1px solid #000000' }}>
             <input
               type="checkbox"
               checked={todo.completed}
@@ -80,7 +80,7 @@ export default function App() {
             <span style={{
               flex: 1, fontSize: 15,
               textDecoration: todo.completed ? 'line-through' : 'none',
-              color: todo.completed ? '#ffffff' : '#ffffff'
+              color: todo.completed ? '#000000' : '#000000'
             }}>
               {todo.text}
             </span>
